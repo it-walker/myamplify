@@ -17,6 +17,9 @@
       },
       "api": {
         "myamplify": {}
+      },
+      "storage": {
+        "s3": {}
       }
     }
   }

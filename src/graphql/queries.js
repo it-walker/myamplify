@@ -6,6 +6,7 @@ export const getTodo = /* GraphQL */ `
     getTodo(id: $id) {
       title
       description
+      image
       id
       createdAt
       updatedAt
@@ -24,6 +25,7 @@ export const listTodos = /* GraphQL */ `
       items {
         title
         description
+        image
         id
         createdAt
         updatedAt
