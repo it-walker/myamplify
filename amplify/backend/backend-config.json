@@ -60,6 +60,13 @@
       "service": "Cognito"
     }
   },
+  "custom": {
+    "sns": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "customCloudformation"
+    }
+  },
   "storage": {
     "s3": {
       "dependsOn": [],

@@ -17,6 +17,11 @@ export type AmplifyDependentResourcesAttributes = {
       "UserPoolName": "string"
     }
   },
+  "custom": {
+    "sns": {
+      "snsTopicARN": "string"
+    }
+  },
   "storage": {
     "s3": {
       "BucketName": "string",

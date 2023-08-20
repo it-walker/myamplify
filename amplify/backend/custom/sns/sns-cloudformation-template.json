@@ -1,0 +1,36 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Parameters": {
+    "env": {
+      "Type": "String"
+    }
+  },
+  "Resources": {
+    "SNSTopic": {
+      "Type": "AWS::SNS::Topic",
+      "Properties": {
+        "TopicName": {
+          "Fn::Sub": "sns-topic-${AWS::StackName}-${env}"
+        }
+      }
+    },
+    "SNSSubscriptionEmail": {
+      "Type": "AWS::SNS::Subscription",
+      "Properties": {
+        "Protocol": "email",
+        "TopicArn": {
+          "Ref": "SNSTopic"
+        },
+        "Endpoint": "myhome.satoh@gmail.com"
+      }
+    }
+  },
+  "Outputs": {
+    "snsTopicARN": {
+      "Value": {
+        "Ref": "SNSTopic"
+      }
+    }
+  },
+  "Description": "{\"createdOn\":\"Mac\",\"createdBy\":\"Amplify\",\"createdWith\":\"12.3.0\",\"stackType\":\"custom-customCloudformation\",\"metadata\":{}}"
+}
